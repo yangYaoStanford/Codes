@@ -34,12 +34,12 @@ var wind_u4 = Chart.image.series(quantity4, state, ee.Reducer.mean(), 10000, 'sy
 });
 print(wind_u4);
 
-// var quantity2 = NLDAS.filterDate('2017-09-01', '2018-01-01').select('wind_v');
-// var wind_v = Chart.image.series(quantity2, state, ee.Reducer.mean(), 10000, 'system:time_start').setOptions({
-//         title: 'V Wind Velocity',
-//         vAxis: {title: 'm/s'},
-// });
-// print(wind_v);
+var quantity2 = NLDAS.filterDate('2017-09-01', '2018-01-01').select('wind_v');
+var wind_v = Chart.image.series(quantity2, state, ee.Reducer.mean(), 10000, 'system:time_start').setOptions({
+        title: 'V Wind Velocity',
+        vAxis: {title: 'm/s'},
+});
+print(wind_v);
 
 
 
@@ -156,17 +156,17 @@ var featureCollection = ee.FeatureCollection('ft:1fRY18cjsHzDgGiJiS2nnpUU3v9JPDc
 // Filter the collection.
 var filteredFC = featureCollection.filter(ee.Filter.eq('Name', 'California'));
 
-// Display the collection.
-// Map.addLayer(filteredFC, {}, 'California');
+Display the collection.
+Map.addLayer(filteredFC, {}, 'California');
       
 
-// var TS1 = Chart.image.series(firms, firms.first(),  ee.Reducer.mean(),1000, 'system:time_start').setOptions({
-//         title: 'Precipitation 1-Year Time Series',
-//         vAxis: {title: 'mm/pentad'},
-// });
+var TS1 = Chart.image.series(firms, firms.first(),  ee.Reducer.mean(),1000, 'system:time_start').setOptions({
+         title: 'Precipitation 1-Year Time Series',
+         vAxis: {title: 'mm/pentad'},
+});
 
 //Set a lat long and zoom level for the setup
-//Map.setCenter(-118.3179, 34.218,11)
+Map.setCenter(-118.3179, 34.218,11)
 
 //To make it look slightly better set the background to be Satellite imagery instead of Map
 Map.setOptions('SATELLITE')
