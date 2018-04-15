@@ -1,4 +1,4 @@
-/ Define a FeatureCollection: regions of the American West.
+// Define a FeatureCollection: regions of the American West.
 var regions = ee.FeatureCollection([
  ee.Feature(    // San Francisco.
    ee.Geometry.Rectangle(-122.45, 37.74, -122.4, 37.8), {label: 'City'}),
@@ -68,9 +68,3 @@ Export.table.toDrive({
  fileNamePrefix: desc1,
  fileFormat: 'CSV'
 });
-Message Input
-
-
-Message Joseph Bakarji, Mehrdad
-
-*bold* _italics_ ~strike~ `code` ```preformatted``` >quote
